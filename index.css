@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#hero {
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f1ef;
+  position: relative;
+}
+#hero nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#hero nav i {
+  font-size: 1.4rem;
+  color: #ff8405;
+  opacity: 0.8;
+  cursor: pointer;
+}
+#hero nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero nav ul li {
+  margin: 0 1.5rem;
+  list-style: none;
+}
+#hero nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+}
+#hero nav img {
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#hero nav .hamContainer {
+  width: 3rem;
+  height: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  cursor: pointer;
+}
+#hero nav .hamContainer > * {
+  width: 100%;
+  height: 3px;
+  background-color: #555;
+  border-radius: 10px;
+}
+#hero nav .hamContainer > *:nth-child(1) {
+  width: 70%;
+}
+#hero nav .hamContainer > *:nth-child(3) {
+  width: 60%;
+}
+#hero .mainContainer {
+  width: 80%;
+  min-height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+#hero .mainContainer > div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#hero .mainContainer .C_phrase {
+  padding: 20px;
+}
+#hero .mainContainer .C_phrase h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+#hero .mainContainer .C_phrase p {
+  font-family: "Roboto Slab", serif;
+}
+#hero .mainContainer .C_phrase p small {
+  color: red;
+}
+#hero .mainContainer .C_phrase .search_wrapper {
+  width: 90%;
+  height: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero .mainContainer .C_phrase .search_wrapper input {
+  width: 75%;
+  height: 2.5rem;
+  border: none;
+  padding: 10px;
+}
+#hero .mainContainer .C_phrase .search_wrapper input:focus {
+  outline: none;
+}
+#hero .mainContainer .C_phrase .search_wrapper button {
+  width: 25%;
+  height: 2.5rem;
+  border: none;
+  background: #ff8405;
+  color: azure;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#hero .mainContainer .C_phrase .search_wrapper button:hover {
+  background: red;
+}
+#hero .mainContainer .sec_gallery {
+  font-family: "Roboto Slab", serif;
+}
+#hero .mainContainer .sec_gallery img {
+  max-width: 15rem;
+}
+#hero .mainContainer .sec_gallery p {
+  font-size: 1.54rem;
+  margin: 1rem 0 0.2rem 0;
+}
+#hero .mainContainer .sec_gallery h6 {
+  font-size: 0.8rem;
+}
+#hero .scroll__btn {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 5px solid #f3f1ef;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero .scroll__btn span {
+  font-size: 2.2rem;
+  color: #555;
+}
+
+#bestSellers,
+#otherBooks {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  margin-top: 5rem;
+}
+#bestSellers > h2,
+#otherBooks > h2 {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  padding: 40px 0 20px 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+#bestSellers .cardsContainr,
+#otherBooks .cardsContainr {
+  width: 95%;
+  min-height: 70vh;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+#bestSellers .cardsContainr .Book,
+#otherBooks .cardsContainr .Book {
+  width: 16rem;
+  min-height: 25rem;
+  border-radius: 4px;
+  padding: 10px 5px;
+  transition: 0.4s ease-in;
+}
+#bestSellers .cardsContainr .Book:hover,
+#otherBooks .cardsContainr .Book:hover {
+  background: rgba(85, 85, 85, 0.034);
+}
+#bestSellers .cardsContainr .Book > img,
+#otherBooks .cardsContainr .Book > img {
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#bestSellers .cardsContainr .Book .bok_details,
+#otherBooks .cardsContainr .Book .bok_details {
+  width: 100%;
+  min-height: 20%;
+  font-family: "Roboto Slab", serif;
+  padding: 10px;
+  position: relative;
+}
+#bestSellers .cardsContainr .Book .bok_details h2,
+#otherBooks .cardsContainr .Book .bok_details h2 {
+  font-size: 1.2rem;
+  padding: 5px 30px 5px 0;
+}
+#bestSellers .cardsContainr .Book .bok_details h2 a,
+#otherBooks .cardsContainr .Book .bok_details h2 a {
+  color: #000;
+  text-decoration: none;
+}
+#bestSellers .cardsContainr .Book .bok_details span,
+#otherBooks .cardsContainr .Book .bok_details span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ff8405;
+}
+
+#findme {
+  width: 100%;
+  height: 100vh;
+  background-color: #f3f1ef;
+  display: flex;
+}
+#findme > div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#findme .phSide img {
+  width: 70%;
+}
+#findme .findmeDetails {
+  padding: 15px;
+  flex-direction: column;
+}
+#findme .findmeDetails h1 {
+  font-size: 4rem;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 3rem;
+}
+#findme .findmeDetails p {
+  font-family: "Inconsolata", monospace;
+  line-height: 30px;
+  color: #555;
+}
+#findme .findmeDetails a {
+  background-color: #00bfa6;
+  padding: 15px 25px;
+  text-decoration: none;
+  margin: 2rem 0;
+  font-family: "Roboto Slab", serif;
+  color: #fff;
+  transition: 0.4s ease-in;
+}
+#findme .findmeDetails a:hover {
+  background-color: #ff8405;
+}
+
+#askForBook {
+  width: 100%;
+  height: 40vh;
+  background: rgb(245, 243, 239);
+  background: linear-gradient(52deg, rgb(245, 243, 239) 0%, rgb(255, 255, 255) 52%, rgb(255, 255, 255) 100%);
+  padding: 10px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: -2px 9px 20px rgba(0, 0, 0, 0.0274509804);
+  font-family: "Roboto Slab", serif;
+}
+#askForBook img {
+  height: 100%;
+}
+#askForBook > div {
+  height: 100%;
+}
+#askForBook > div h4 {
+  margin-top: 2rem;
+}
+#askForBook > div h2 {
+  padding: 20px 0;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+#askForBook > div a {
+  background-color: #00bfa6;
+  padding: 15px 25px;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-family: "Roboto Slab", serif;
+  color: #fff;
+  transition: 0.4s ease-in;
+}
+#askForBook > div a:hover {
+  background-color: #ff8405;
+}
+
+#feedBack {
+  width: 100%;
+  min-height: 70vh;
+  font-family: "Roboto Slab", serif;
+}
+#feedBack h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3.5rem;
+}
+#feedBack .Container {
+  max-width: 300%;
+  min-height: 80vh;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+#feedBack .Container p {
+  color: #555;
+}
+#feedBack .Container .wrrapper {
+  width: 300%;
+  min-height: 80vh;
+  display: flex;
+  -webkit-animation: SliderAnimation 99s ease infinite;
+          animation: SliderAnimation 99s ease infinite;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+@-webkit-keyframes SliderAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-200%);
+  }
+  90% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes SliderAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-200%);
+  }
+  90% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#feedBack .Container .wrrapper .Review {
+  width: 26rem;
+  min-height: 18rem;
+  padding: 5px 25px;
+  margin: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#feedBack .Container .wrrapper .Review .starWrapper {
+  max-width: 10rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: rgb(250, 216, 23);
+  margin: 1.2rem 0.2rem;
+  font-size: 1.2rem;
+  align-self: start;
+}
+#feedBack .Container .cosReviw {
+  width: 100%;
+  height: 3.6rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  color: #555;
+  justify-content: flex-start;
+}
+#feedBack .Container .cosReviw img {
+  height: 3rem;
+  width: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer > div {
+  width: 32%;
+  height: 100%;
+  font-family: "Roboto Slab", serif;
+  color: #555;
+}
+footer > div h4 {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.9rem;
+  color: #000;
+}
+footer > div li {
+  list-style: none;
+  margin: 1rem 0 0 40%;
+}
+footer > div li i {
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+footer > div li a {
+  text-decoration: none;
+  color: #555;
+}/*# sourceMappingURL=index.css.map */
